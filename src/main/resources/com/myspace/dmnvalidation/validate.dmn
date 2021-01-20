@@ -59,6 +59,9 @@ if(date(birthDate) > today()) then false else true</dmn:text>
     <dmn:informationRequirement id="_14F292BB-4396-4759-9785-73A4E769BFDC">
       <dmn:requiredDecision href="#_7F55E982-F2AD-4D1F-A0E3-C0FF90A2CB78"/>
     </dmn:informationRequirement>
+    <dmn:informationRequirement id="_C01098D3-6C6D-46E8-9541-912E9CAC377C">
+      <dmn:requiredDecision href="#_E57A87CD-AC3C-485D-BADB-9B74441AA2F0"/>
+    </dmn:informationRequirement>
     <dmn:decisionTable id="_4CA4E91C-8086-4D7C-9A96-70B251DF76B7" hitPolicy="RULE ORDER" preferredOrientation="Rule-as-Row">
       <dmn:input id="_1556B040-9677-406C-B5F3-53CC8CA55E0B">
         <dmn:inputExpression id="_09934750-9C6B-4ECA-AA9D-30D60EA93951" typeRef="boolean">
@@ -304,6 +307,10 @@ if(date(birthDate) > today()) then false else true</dmn:text>
       <dmndi:DMNEdge id="dmnedge-_14F292BB-4396-4759-9785-73A4E769BFDC" dmnElementRef="_14F292BB-4396-4759-9785-73A4E769BFDC">
         <di:waypoint x="568" y="224"/>
         <di:waypoint x="228" y="137"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_C01098D3-6C6D-46E8-9541-912E9CAC377C" dmnElementRef="_C01098D3-6C6D-46E8-9541-912E9CAC377C">
+        <di:waypoint x="719" y="224"/>
+        <di:waypoint x="278" y="112"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_B715412C-9B27-4A18-9016-FF7C2F7747F1" dmnElementRef="_B715412C-9B27-4A18-9016-FF7C2F7747F1">
         <di:waypoint x="155" y="389"/>
