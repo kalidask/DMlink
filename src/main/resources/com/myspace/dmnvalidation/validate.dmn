@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://github.com/kiegroup/drools/kie-dmn/_B22F98AA-0976-459E-84B2-BCB719C2EA11" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_5F64D591-9091-449F-8103-F0A7110E8CF2" name="validateDta" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://github.com/kiegroup/drools/kie-dmn/_B22F98AA-0976-459E-84B2-BCB719C2EA11">
   <dmn:extensionElements/>
+  <dmn:itemDefinition id="_737FBAF0-818D-4334-9195-1D7C265B59C7" name="yearBirth" isCollection="false">
+    <dmn:typeRef>number</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_BAFC835D-4B2F-4BF7-9B58-5888AD1F3D4E" name="monBirth" isCollection="false">
+    <dmn:typeRef>number</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_31ED4AF8-FCA4-4EF8-9D9E-E3C96B1FC300" name="dateBirth" isCollection="false">
+    <dmn:typeRef>number</dmn:typeRef>
+  </dmn:itemDefinition>
   <dmn:decision id="_D1CD4FB0-4BC6-43CB-A845-76D37B33F43D" name="lastNameValidated">
     <dmn:extensionElements/>
     <dmn:variable id="_8AE4F79A-D6F0-4F71-A3FD-81416244F27C" name="lastNameValidated" typeRef="boolean"/>
@@ -41,9 +50,9 @@
     </dmn:informationRequirement>
     <dmn:literalExpression id="_E47A0F52-6919-4DB7-853C-F9FAFD212E28">
       <dmn:text>if (matches(birthDate, "(\d{1,2})-(\d{1,2})-(\d{4})$") )  then "Format Matched" else "Format not maching"
-mon = Month(birthDate);
-yea = Year(birthDate);
-dat = Day(birthDate);
+monBirth = Month(birthDate);
+yearBirth = Year(birthDate);
+dateBirth = Day(birthDate);
 if(date(yea,mon,dat) > today()) then "no future date allowed" else "fine"
 
 
