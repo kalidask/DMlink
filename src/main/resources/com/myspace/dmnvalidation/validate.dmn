@@ -49,7 +49,7 @@
       <dmn:requiredInput href="#_CF6183DA-AACC-49FB-A64F-9DD2424040D3"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_E47A0F52-6919-4DB7-853C-F9FAFD212E28">
-      <dmn:text>if (matches(birthDate, "(\d{1,2})-(\d{1,2})-(\d{4})$") and )  then "Format Matched"  else "Date Format incorrect"</dmn:text>
+      <dmn:text>if (matches(birthDate, "(\d{1,2})-(\d{1,2})-(\d{4})$") )  then "Format Matched"  else "Date Format incorrect"</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:decision id="_F5C17A30-3698-4BAF-A0C3-2426C6263ECC" name="fieldValidation">
@@ -67,8 +67,8 @@
     <dmn:informationRequirement id="_14F292BB-4396-4759-9785-73A4E769BFDC">
       <dmn:requiredDecision href="#_7F55E982-F2AD-4D1F-A0E3-C0FF90A2CB78"/>
     </dmn:informationRequirement>
-    <dmn:informationRequirement id="_36B4ADD2-779D-45DB-99B1-D8D084A5AC0C">
-      <dmn:requiredDecision href="#_F328061A-1AAF-481C-988B-F8F3721B83A9"/>
+    <dmn:informationRequirement id="_C01098D3-6C6D-46E8-9541-912E9CAC377C">
+      <dmn:requiredDecision href="#_E57A87CD-AC3C-485D-BADB-9B74441AA2F0"/>
     </dmn:informationRequirement>
     <dmn:decisionTable id="_4CA4E91C-8086-4D7C-9A96-70B251DF76B7" hitPolicy="RULE ORDER" preferredOrientation="Rule-as-Row">
       <dmn:input id="_1556B040-9677-406C-B5F3-53CC8CA55E0B">
@@ -148,13 +148,9 @@
   <dmn:decision id="_F328061A-1AAF-481C-988B-F8F3721B83A9" name="birthFutureDate">
     <dmn:extensionElements/>
     <dmn:variable id="_FA62915E-11E1-49B3-BD11-8A986E1B2E83" name="birthFutureDate" typeRef="string"/>
-    <dmn:informationRequirement id="_C01098D3-6C6D-46E8-9541-912E9CAC377C">
-      <dmn:requiredDecision href="#_E57A87CD-AC3C-485D-BADB-9B74441AA2F0"/>
-    </dmn:informationRequirement>
     <dmn:literalExpression id="_942E1843-68CD-4F90-8901-0C1B1FFCB170">
-      <dmn:text>yearBirth = day of year(birthDate);
-monBirth = month of year(birthDate);
-if (date(Year(birthDate),Month(birthDate) ,Day(birthDate) ) > today()) then "no future date allowed" else "fine"
+      <dmn:text>if (date(yearBirth,ma ,day of year(birthDate) ) > today()) then "no future date allowed" else "fine"
+
 
 
 
@@ -310,7 +306,7 @@ if (date(Year(birthDate),Month(birthDate) ,Day(birthDate) ) > today()) then "no 
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="540" y="104" width="100" height="50"/>
+        <dc:Bounds x="596" y="15" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_92826201-0220-4F41-B80A-4CC248C2EC8C" dmnElementRef="_92826201-0220-4F41-B80A-4CC248C2EC8C" isCollapsed="false">
@@ -346,8 +342,8 @@ if (date(Year(birthDate),Month(birthDate) ,Day(birthDate) ) > today()) then "no 
         <di:waypoint x="568" y="224"/>
         <di:waypoint x="228" y="137"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_36B4ADD2-779D-45DB-99B1-D8D084A5AC0C" dmnElementRef="_36B4ADD2-779D-45DB-99B1-D8D084A5AC0C">
-        <di:waypoint x="590" y="129"/>
+      <dmndi:DMNEdge id="dmnedge-_C01098D3-6C6D-46E8-9541-912E9CAC377C" dmnElementRef="_C01098D3-6C6D-46E8-9541-912E9CAC377C">
+        <di:waypoint x="744" y="204"/>
         <di:waypoint x="278" y="112"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_7969D994-F382-4044-BFF5-31F1613C1B6F" dmnElementRef="_7969D994-F382-4044-BFF5-31F1613C1B6F">
@@ -361,10 +357,6 @@ if (date(Year(birthDate),Month(birthDate) ,Day(birthDate) ) > today()) then "no 
       <dmndi:DMNEdge id="dmnedge-_B715412C-9B27-4A18-9016-FF7C2F7747F1" dmnElementRef="_B715412C-9B27-4A18-9016-FF7C2F7747F1">
         <di:waypoint x="155" y="389"/>
         <di:waypoint x="155" y="249"/>
-      </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_C01098D3-6C6D-46E8-9541-912E9CAC377C" dmnElementRef="_C01098D3-6C6D-46E8-9541-912E9CAC377C">
-        <di:waypoint x="744" y="204"/>
-        <di:waypoint x="590" y="154"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
