@@ -40,7 +40,7 @@
       <dmn:requiredInput href="#_CF6183DA-AACC-49FB-A64F-9DD2424040D3"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_E47A0F52-6919-4DB7-853C-F9FAFD212E28">
-      <dmn:text>if (matches(birthDate, "(\d{1,2})-(\d{1,2})-(\d{4})$") )  then "Format Matched" else "Format not maching" ;
+      <dmn:text>if (matches(birthDate, "(\d{1,2})-(\d{1,2})-(\d{4})$") )  then "Format Matched" else "Format not maching"
 mon = Month(birthDate);
 yea = Year(birthDate);
 dat = Day(birthDate);
