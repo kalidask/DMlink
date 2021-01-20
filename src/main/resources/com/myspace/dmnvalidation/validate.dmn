@@ -52,7 +52,7 @@
       <dmn:text>
 if (matches(birthDate, "(\d{1,2})-(\d{1,2})-(\d{4})$") )  then "Format Matched"
 
-if(date(Year(birthDate),Month(birthDate),Day(birthDate)) > today()) then "no future date allowed" else "fine"
+if (date(Year(birthDate),Month(birthDate),Day(birthDate)) > today()) then "no future date allowed" else "fine"
 
 
 </dmn:text>
