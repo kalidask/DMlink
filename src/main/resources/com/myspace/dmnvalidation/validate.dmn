@@ -22,7 +22,7 @@
       <dmn:requiredInput href="#_1F8F90DB-8447-492A-98C7-DB1584CD7F50"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_CB1221B1-3DAD-42A1-A300-5AC1AE8F1926">
-      <dmn:text>if (string length(mobileNumber) = 0) then false else if (matches(mobileNumber, "^[0-9]") and (string length(mobileNumber) =10))  then true else false</dmn:text>
+      <dmn:text>if (string length(mobileNumber) = 0) then false else if (matches(mobileNumber, "^[0-9]*$") and (string length(mobileNumber) =10))  then true else false</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_1ACEB03C-2F60-4FCC-A42E-424A73A53463" name="lastName">
