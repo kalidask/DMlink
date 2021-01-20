@@ -152,7 +152,15 @@
       <dmn:requiredDecision href="#_E57A87CD-AC3C-485D-BADB-9B74441AA2F0"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_942E1843-68CD-4F90-8901-0C1B1FFCB170">
-      <dmn:text>if (date(Year(birthDate),Month(birthDate) ,Day(birthDate) ) > today()) then "no future date allowed" else "fine"</dmn:text>
+      <dmn:text>yearBirth = day of year(birthDate);
+monBirth = month of year(birthDate);
+if (date(Year(birthDate),Month(birthDate) ,Day(birthDate) ) > today()) then "no future date allowed" else "fine"
+
+
+
+
+
+</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_FE4D0C40-A411-4DAC-8003-A9205C22D050" name="firstName">
@@ -202,7 +210,7 @@
             <kie:width>927.0</kie:width>
           </kie:ComponentWidths>
           <kie:ComponentWidths dmnElementRef="_942E1843-68CD-4F90-8901-0C1B1FFCB170">
-            <kie:width>300.0</kie:width>
+            <kie:width>1004.0</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
