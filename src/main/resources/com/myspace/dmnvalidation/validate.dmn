@@ -49,10 +49,11 @@
       <dmn:requiredInput href="#_CF6183DA-AACC-49FB-A64F-9DD2424040D3"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_E47A0F52-6919-4DB7-853C-F9FAFD212E28">
-      <dmn:text>if (matches(birthDate, "(\d{1,2})-(\d{1,2})-(\d{4})$") )  then "Format Matched" else "Format not maching"
-monBirth = Month(birthDate);
+      <dmn:text>monBirth = Month(birthDate);
 yearBirth = Year(birthDate);
 dateBirth = Day(birthDate);
+if (matches(birthDate, "(\d{1,2})-(\d{1,2})-(\d{4})$") )  then "Format Matched" else "Format not maching"
+
 if(date(yea,mon,dat) > today()) then "no future date allowed" else "fine"
 
 
