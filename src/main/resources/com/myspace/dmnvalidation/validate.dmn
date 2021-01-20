@@ -41,8 +41,7 @@
     </dmn:informationRequirement>
     <dmn:literalExpression id="_E47A0F52-6919-4DB7-853C-F9FAFD212E28">
       <dmn:text>
-Date newDate = new Date();
-if(date(birthDate) > date(newDate)(firstName)) then false else true</dmn:text>
+if(date(birthDate) > today()) then false else true</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:decision id="_F5C17A30-3698-4BAF-A0C3-2426C6263ECC" name="fieldValidation">
