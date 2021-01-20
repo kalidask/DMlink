@@ -33,9 +33,12 @@
     <dmn:extensionElements/>
     <dmn:variable id="_AA98F48C-DCC8-4153-8666-C491FCBFDCBC" name="lastName" typeRef="string"/>
   </dmn:inputData>
-  <dmn:decision id="_E57A87CD-AC3C-485D-BADB-9B74441AA2F0" name="Decision-1">
+  <dmn:decision id="_E57A87CD-AC3C-485D-BADB-9B74441AA2F0" name="birthValidation">
     <dmn:extensionElements/>
-    <dmn:variable id="_98BF7986-3526-41C0-A480-6377B84C6027" name="Decision-1" typeRef="boolean"/>
+    <dmn:variable id="_98BF7986-3526-41C0-A480-6377B84C6027" name="birthValidation" typeRef="boolean"/>
+    <dmn:informationRequirement id="_7E399AF8-6FA0-4C0D-B752-C8263D229847">
+      <dmn:requiredInput href="#_CF6183DA-AACC-49FB-A64F-9DD2424040D3"/>
+    </dmn:informationRequirement>
     <dmn:literalExpression id="_E47A0F52-6919-4DB7-853C-F9FAFD212E28">
       <dmn:text>
 Date newDate = new Date();
@@ -310,6 +313,10 @@ if(date(birthDate) > date(newDate)(firstName)) then false else true</dmn:text>
       <dmndi:DMNEdge id="dmnedge-_7969D994-F382-4044-BFF5-31F1613C1B6F" dmnElementRef="_7969D994-F382-4044-BFF5-31F1613C1B6F">
         <di:waypoint x="395" y="414"/>
         <di:waypoint x="467" y="224"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_7E399AF8-6FA0-4C0D-B752-C8263D229847" dmnElementRef="_7E399AF8-6FA0-4C0D-B752-C8263D229847">
+        <di:waypoint x="756" y="406"/>
+        <di:waypoint x="719" y="249"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
