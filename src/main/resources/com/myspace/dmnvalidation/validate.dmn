@@ -35,13 +35,13 @@
   </dmn:inputData>
   <dmn:decision id="_E57A87CD-AC3C-485D-BADB-9B74441AA2F0" name="birthValidation">
     <dmn:extensionElements/>
-    <dmn:variable id="_98BF7986-3526-41C0-A480-6377B84C6027" name="birthValidation" typeRef="boolean"/>
+    <dmn:variable id="_98BF7986-3526-41C0-A480-6377B84C6027" name="birthValidation" typeRef="string"/>
     <dmn:informationRequirement id="_7E399AF8-6FA0-4C0D-B752-C8263D229847">
       <dmn:requiredInput href="#_CF6183DA-AACC-49FB-A64F-9DD2424040D3"/>
     </dmn:informationRequirement>
     <dmn:literalExpression id="_E47A0F52-6919-4DB7-853C-F9FAFD212E28">
-      <dmn:text>
-if(date(birthDate) > today()) then false else true</dmn:text>
+      <dmn:text>if (matches(birthDate, "(\d{1,2})-(\d{1,2})-(\d{4})$") )  then "Format Matched" else "Format not maching"
+</dmn:text>
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:decision id="_F5C17A30-3698-4BAF-A0C3-2426C6263ECC" name="fieldValidation">
@@ -236,7 +236,7 @@ if(date(birthDate) > today()) then false else true</dmn:text>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="693" y="179" width="100" height="50"/>
+        <dc:Bounds x="694" y="179" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_F5C17A30-3698-4BAF-A0C3-2426C6263ECC" dmnElementRef="_F5C17A30-3698-4BAF-A0C3-2426C6263ECC" isCollapsed="false">
@@ -294,7 +294,7 @@ if(date(birthDate) > today()) then false else true</dmn:text>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_7E399AF8-6FA0-4C0D-B752-C8263D229847" dmnElementRef="_7E399AF8-6FA0-4C0D-B752-C8263D229847">
         <di:waypoint x="756" y="406"/>
-        <di:waypoint x="743" y="229"/>
+        <di:waypoint x="744" y="229"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_F61A0284-C914-429B-9E2D-15A280B49F86" dmnElementRef="_F61A0284-C914-429B-9E2D-15A280B49F86">
         <di:waypoint x="205" y="224"/>
@@ -313,7 +313,7 @@ if(date(birthDate) > today()) then false else true</dmn:text>
         <di:waypoint x="228" y="137"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_C01098D3-6C6D-46E8-9541-912E9CAC377C" dmnElementRef="_C01098D3-6C6D-46E8-9541-912E9CAC377C">
-        <di:waypoint x="743" y="204"/>
+        <di:waypoint x="744" y="204"/>
         <di:waypoint x="278" y="112"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_B715412C-9B27-4A18-9016-FF7C2F7747F1" dmnElementRef="_B715412C-9B27-4A18-9016-FF7C2F7747F1">
