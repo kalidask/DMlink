@@ -2,6 +2,7 @@
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://github.com/kiegroup/drools/kie-dmn/_B22F98AA-0976-459E-84B2-BCB719C2EA11" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_5F64D591-9091-449F-8103-F0A7110E8CF2" name="validate" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://github.com/kiegroup/drools/kie-dmn/_B22F98AA-0976-459E-84B2-BCB719C2EA11">
   <dmn:extensionElements/>
   <dmn:decision id="_D1CD4FB0-4BC6-43CB-A845-76D37B33F43D" name="lastNameValidated">
+    <dmn:extensionElements/>
     <dmn:variable id="_8AE4F79A-D6F0-4F71-A3FD-81416244F27C" name="lastNameValidated" typeRef="boolean"/>
     <dmn:informationRequirement id="_27ECF25D-60CF-4A30-9DF7-A1A41AA563BC">
       <dmn:requiredInput href="#_1ACEB03C-2F60-4FCC-A42E-424A73A53463"/>
@@ -11,9 +12,11 @@
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_1ACEB03C-2F60-4FCC-A42E-424A73A53463" name="lastName">
+    <dmn:extensionElements/>
     <dmn:variable id="_AA98F48C-DCC8-4153-8666-C491FCBFDCBC" name="lastName" typeRef="string"/>
   </dmn:inputData>
   <dmn:decision id="_F5C17A30-3698-4BAF-A0C3-2426C6263ECC" name="fieldValidation">
+    <dmn:extensionElements/>
     <dmn:variable id="_89F1A687-0879-4718-B668-E2C82971F91B" name="fieldValidation" typeRef="string"/>
     <dmn:informationRequirement id="_F61A0284-C914-429B-9E2D-15A280B49F86">
       <dmn:requiredDecision href="#_F159061B-0CEB-462C-8DBD-84DBD41B1B10"/>
@@ -40,7 +43,8 @@
           <dmn:text>abnValidated</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:output id="_9062119F-70C9-41AC-B8F0-4DC4A622C195" typeRef="string"/>
+      <dmn:output id="_9062119F-70C9-41AC-B8F0-4DC4A622C195"/>
+      <dmn:annotation name=""/>
       <dmn:rule id="_7D1AAFB4-66A7-4D6A-B761-D063605EAC4A">
         <dmn:inputEntry id="_5E95EE11-6050-4C7F-B0BE-AEBB0357EE00">
           <dmn:text>true</dmn:text>
@@ -54,6 +58,9 @@
         <dmn:outputEntry id="_0A3CD870-099D-4F86-A5CB-BF0E7D8F567D">
           <dmn:text>true</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
       </dmn:rule>
       <dmn:rule id="_3EFF7D63-54E9-46F3-9288-9A13F7AC6758">
         <dmn:inputEntry id="_F01A7BDF-EF00-466D-891F-79012F2223C7">
@@ -68,10 +75,14 @@
         <dmn:outputEntry id="_FAC7C265-9B10-4DC1-85DF-787F24C75555">
           <dmn:text>false</dmn:text>
         </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
   <dmn:decision id="_F159061B-0CEB-462C-8DBD-84DBD41B1B10" name="firstNameValidated">
+    <dmn:extensionElements/>
     <dmn:variable id="_82D43CFC-C93B-4A0F-8E13-67ADE270F054" name="firstNameValidated" typeRef="boolean"/>
     <dmn:informationRequirement id="_B715412C-9B27-4A18-9016-FF7C2F7747F1">
       <dmn:requiredInput href="#_FE4D0C40-A411-4DAC-8003-A9205C22D050"/>
@@ -81,12 +92,15 @@
     </dmn:literalExpression>
   </dmn:decision>
   <dmn:inputData id="_92826201-0220-4F41-B80A-4CC248C2EC8C" name="abn">
+    <dmn:extensionElements/>
     <dmn:variable id="_C82A7CE0-6EED-4EBD-958B-8D72822B96E4" name="abn" typeRef="string"/>
   </dmn:inputData>
   <dmn:inputData id="_FE4D0C40-A411-4DAC-8003-A9205C22D050" name="firstName">
+    <dmn:extensionElements/>
     <dmn:variable id="_2D51B5C0-53BC-4D6B-8327-B44A3B09C6D3" name="firstName" typeRef="string"/>
   </dmn:inputData>
   <dmn:decision id="_B94EEB70-86B1-4A79-9D72-8E01F4DB4A83" name="abnValidated">
+    <dmn:extensionElements/>
     <dmn:variable id="_52294B6F-CC56-4BAA-BAEF-69EDBF740C26" name="abnValidated" typeRef="boolean"/>
     <dmn:informationRequirement id="_7969D994-F382-4044-BFF5-31F1613C1B6F">
       <dmn:requiredInput href="#_92826201-0220-4F41-B80A-4CC248C2EC8C"/>
@@ -133,7 +147,7 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="256" y="389" width="100" height="50"/>
+        <dc:Bounds x="257" y="389" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_F5C17A30-3698-4BAF-A0C3-2426C6263ECC" dmnElementRef="_F5C17A30-3698-4BAF-A0C3-2426C6263ECC" isCollapsed="false">
@@ -182,7 +196,7 @@
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-_27ECF25D-60CF-4A30-9DF7-A1A41AA563BC" dmnElementRef="_27ECF25D-60CF-4A30-9DF7-A1A41AA563BC">
-        <di:waypoint x="256" y="414"/>
+        <di:waypoint x="257" y="414"/>
         <di:waypoint x="326" y="227"/>
       </dmndi:DMNEdge>
       <dmndi:DMNEdge id="dmnedge-_F61A0284-C914-429B-9E2D-15A280B49F86" dmnElementRef="_F61A0284-C914-429B-9E2D-15A280B49F86">
